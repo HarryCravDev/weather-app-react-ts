@@ -1,10 +1,13 @@
-import React from "react";
+import { WeatherProvider } from "./context/WeatherContext";
+import WeatherContainer from "./components/weather-container/WeatherContainer.component";
 
 function App() {
 	return (
-		<div className="App">
-			<h1 className="text-3xl font-bold">Hello world!</h1>
-		</div>
+		<WeatherProvider>
+			<div className="App  min-h-screen flex justify-center items-center flex-col	">
+				<WeatherContainer></WeatherContainer>
+			</div>
+		</WeatherProvider>
 	);
 }
 
